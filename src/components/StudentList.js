@@ -14,7 +14,14 @@ function StudentList(props) {
       </thead>
       <tbody>
         {props.studentList.map((stud, i) => {
-          return <Student student={stud} key={i} />;
+          return <Student 
+          student={stud}
+           key={i}
+           setName={props.setName}
+           setEmail={props.setEmail}
+           setPhone={props.setPhone}
+           setId={props.setId}
+           setStudentList={props.setStudentList} />;
         })}
       </tbody>
     </table>
